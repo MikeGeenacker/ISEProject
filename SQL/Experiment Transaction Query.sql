@@ -1,0 +1,14 @@
+USE SQL_Experiment
+GO
+
+BEGIN TRANSACTION
+UPDATE Wallet
+SET saldo = 0
+WHERE id = 1
+
+UPDATE Wallet
+SET saldo = 100
+WHERE id = 2
+
+SELECT * FROM Wallet
+ROLLBACK TRANSACTION
